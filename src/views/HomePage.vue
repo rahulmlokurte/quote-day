@@ -1,9 +1,8 @@
 <template>
   <div>
-    <img src="./../assets/Quote.jpg" alt="quote" class="logo">
     <h1>Quote For The Day</h1>
     <button type="button" @click="quote">Click me for a Quote</button>
-    <p>{{clickvalue}}</p>
+    <p v-for="qu in quotes" v-bind:key="qu">{{qu}}</p>
   </div>
 </template>
 
@@ -13,11 +12,13 @@ export default {
   data() {
     return {
       clickvalue: '',
+      quotes: [],
     };
   },
   methods: {
     quote() {
       this.clickvalue = 'I am clicked';
+      this.quotes.push('My First Quote');
     },
   },
 };
@@ -33,14 +34,18 @@ export default {
   }
 
   button {
-    background-color: deeppink;
     text-align: center;
-    font-family: Avenir;
-    font-size: larger;
-    padding: 10px;
+    font-family: cursive;
+    font-size: 40px;
+    padding: 30px;
     border-radius: 30px;
-    border-width: thick;
-    border-color: pink;
+    border-width: thin;
+    border-color: deeppink;
     outline: none;
+    color: deeppink;
+  }
+
+  h1 {
+  color: aquamarine
   }
 </style>

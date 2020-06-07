@@ -24,4 +24,7 @@ text-align: center;
   font-family: Avenir,Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+  body {
+    background-image: url("./assets/mike-yukhtenko-wfh8dDlNFOk-unsplash.jpg");
+  }
 </style>
